@@ -17,20 +17,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="app-wrapper">
         <div class="interface">
-          <form action="" id="city-search">
+          <form id="city-search">
             <input class="search-box" type="text" id="search-text-input" />
             <input class="city-button" type="submit" value="Change location"/>
           </form>
 
           <div class="row">
             <div class="col-9">
-              <h1>Berlin</h1>
+              <h1 id="current-city">Berlin</h1>
             </div>
             <div class="col-3">
              <div class="date" id="now"> 

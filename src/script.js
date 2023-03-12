@@ -37,37 +37,23 @@ let now = new Date();
 formatDate(now);
 
 function showWeather(response) {
-  let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = response.data.name + ", " + response.data.sys.country;
-  let currentTemp = document.querySelector("#temp");
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
-  let description = document.querySelector("#description");
-  let humidity = document.querySelector("#humidity");
-  let windSpeed = document.querySelector("#wind-speed");
-  description.innerHTML = response.data.weather[0].description;
-  humidity.innerHTML = response.data.main.humidity;
-  windSpeed.innerHTML = Math.round(response.data.wind.speed);
-  //console.log(response);
+  console.log(response.data);
+  document.querySelector("#temp").innerHTML = Math.round(
+    response.data.temperature.current
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.condition.description;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
+  document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
 }
 
-function citySearch(city) {
-  let apiKey = "d914567196481a3501772aa91076478e";
-  let apiUrl =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
-    "&appid=" +
-    apiKey +
-    "&units=metric";
+let apiKey = "0e2e078ob6fa6c32484571t470bf53fe";
+let apiUrl =
+  "https://api.shecodes.io/weather/v1/current?query=" +
+  "Berlin" +
+  "&key=" +
+  apiKey +
+  "&units=metric";
 
-  axios.get(apiUrl).then(showWeather);
-}
-
-function inputSearch(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-text-input");
-  let city = searchInput.value;
-  citySearch(city);
-}
-
-let form = document.querySelector("#city-search");
-form.addEventListener("submit", citySearch);
+axios.get(apiUrl).then(showWeather);
