@@ -1,10 +1,82 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.app-wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+}
 .interface {
-  background-color: steelblue;
+  background: #f4f4ef;
+  margin: 0 auto;
   max-width: 600px;
   border-radius: 20px;
   padding: 50px;
+  margin-top: 50px;
+  color: #3a3838;
+}
+.search-box {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(58, 56, 56, 0.15);
+  border: none;
+  width: 60%;
+}
+.city-button {
+  font-family: "Roboto", sans-serif;
+  color: #3a3838;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: rgba(58, 56, 56, 0.15);
+  border: none;
+  border-radius: 20px;
+  width: 30%;
+  padding: 6px;
+  float: right;
+}
+.date {
+  font-weight: 600;
+  text-align: right;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.units {
+  position: relative;
+  font-size: 24px;
+  top: -24px;
+}
+#description {
+  font-weight: 600;
 }
 
 h1 {
-  color: brown;
+  font-weight: 900;
+  padding-bottom: 40px;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 62px;
+  font-weight: 900;
+  float: right;
+  line-height: 1;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.2;
+}
+form {
+  padding-bottom: 30px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
 }

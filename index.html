@@ -11,59 +11,62 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="interface">
-        <form action=""></form>
-        <input type="text" />
-        <input type="submit" />
+      <div class="app-wrapper">
+        <div class="interface">
+          <form action="" id="city-search">
+            <input class="search-box" type="text" id="search-text-input" />
+            <input class="city-button" type="submit" value="Change location"/>
+          </form>
 
-        <div class="row">
-          <div class="col-8">
-            <h1>Berlin</h1>
+          <div class="row">
+            <div class="col-9">
+              <h1>Berlin</h1>
+            </div>
+            <div class="col-3">
+             <div class="date" id="now"> 
+               <p>13:14<br/>
+               20 April</p>
+              </li>
+              </div>
+            </div>
           </div>
-          <div class="col-4">
-            <li>
+
+          <div class="row">
+            <div class="col">
+              <h2><span id="temp">8</span><span class="units">°C|°F</span></h2>
+            </div>
+            <div class="col">
               <ul>
-                13:13
-              </ul>
-              <ul>
-                20 April
-              </ul>
-            </li>
+              <li id="description">Cloudy</li>
+              <li>Humidity: <span id="humidity">30</span>%</li>
+              <li>Wind: <span id="wind-speed">15</span>km/h</li>
+            </ul>
+            </div>
+          </div>
+          <div class ="icon">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/261/original/Untitled-2-05.png?1678652090" alt="semi-cloudy">
           </div>
         </div>
 
-        <div class="row">
-          <div class="col">
-            <h2>8<span>°C|°F</span></h2>
-          </div>
-          <div class="col">
-            <li>
-              <ul>
-                Cloudy
-              </ul>
-              <ul>
-                Humidity: 89%
-              </ul>
-              <ul>
-                Wind: 27 km/h
-              </ul>
-            </li>
-          </div>
-        </div>
+        <small
+          >Coded by Kat Soltysiak,
+          <a href="https://github.com/kasiasoltysiak/Weather-App"
+            >open-source on GitHub
+          </a>
+          and hosted on Netlify</small
+        >
       </div>
-
-      <small
-        >Coded by Kat Soltysiak,
-        <a href="https://github.com/kasiasoltysiak/Weather-App"
-          >open-source on GitHub
-        </a>
-        and hosted on Netlify</small
-      >
     </div>
-    <script href="src/index.js"></script>
+   <script src="src/script.js"></script>
   </body>
 </html>
