@@ -48,6 +48,9 @@ function showWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("src", response.data.condition.icon_url);
+
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
 
 function search(city) {
