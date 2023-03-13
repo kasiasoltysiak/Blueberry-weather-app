@@ -46,12 +46,15 @@ function showWeather(response) {
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
   document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
+  document
+    .querySelector("#icon")
+    .setAttribute("src", response.data.condition.icon_url);
 }
 
 let apiKey = "0e2e078ob6fa6c32484571t470bf53fe";
 let apiUrl =
   "https://api.shecodes.io/weather/v1/current?query=" +
-  "Berlin" +
+  "Rotterdam" +
   "&key=" +
   apiKey +
   "&units=metric";
