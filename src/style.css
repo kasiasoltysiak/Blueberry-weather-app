@@ -1,63 +1,18 @@
 body {
   font-family: "Roboto", sans-serif;
 }
-.app-wrapper {
-  margin: 0 auto;
-  max-width: 600px;
-}
-.interface {
-  background: #f4f4ef;
-  margin: 0 auto;
-  max-width: 600px;
-  border-radius: 20px;
-  padding: 50px;
-  margin-top: 50px;
-  color: #3a3838;
-}
-.search-box {
-  font-family: "Roboto", sans-serif;
-  background-color: rgba(58, 56, 56, 0.15);
-  border: none;
-  width: 60%;
-}
-.city-button {
-  font-family: "Roboto", sans-serif;
-  color: #3a3838;
-  font-weight: 600;
-  font-size: 12px;
-  background-color: rgba(58, 56, 56, 0.15);
-  border: none;
-  border-radius: 20px;
-  width: 30%;
-  padding: 6px;
-  float: right;
-}
-.date {
-  font-weight: 600;
-  text-align: right;
-  line-height: 1.2;
-  font-size: 14px;
-}
-.units {
-  position: relative;
-  font-size: 24px;
-  top: -24px;
-}
-#description {
-  font-weight: 600;
-}
 
 h1 {
   font-weight: 900;
-
-  font-size: 48px;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 62px;
+  font-size: 56px;
   font-weight: 900;
   float: right;
   line-height: 1;
+  margin-bottom: 0;
 }
 
 li {
@@ -80,9 +35,64 @@ img {
   margin: 0 auto;
   max-width: 140px;
 }
+.app-wrapper {
+  margin: 0 auto;
+  max-width: 580px;
+}
+.interface {
+  background: #f4f4ef;
+  margin: 0 auto;
+  max-width: 580px;
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 50px;
+  color: #3a3838;
+  font-size: 14px;
+}
+.search-box {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(58, 56, 56, 0.15);
+  border: none;
+  width: 60%;
+}
+.city-button {
+  font-family: "Roboto", sans-serif;
+  color: #3a3838;
+  font-weight: 600;
+  background-color: rgba(58, 56, 56, 0.15);
+  border: none;
+  border-radius: 20px;
+  width: 30%;
+  padding: 6px;
+  float: right;
+}
+.date {
+  font-weight: 600;
+  text-align: right;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.units {
+  position: relative;
+  font-size: 21px;
+  top: -24px;
+}
 
 .active {
   text-decoration: none;
   color: #3a3838;
   cursor: default;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  font-weight: 600;
+}
+
+#description {
+  font-weight: 600;
+}
+
+#forecast {
+  padding-top: 20px;
 }

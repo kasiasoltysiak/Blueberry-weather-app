@@ -53,6 +53,31 @@ function showWeather(response) {
   celsiusLink.classList.add("active");
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+     <div class="weather-forecast-date">${day}</div>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/261/original/Untitled-2-05.png?1678652090" alt="semi-cloudy" id="icon" width="70%">
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+   `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecast.innerHTML = forecastHTML;
+}
+
 function search(city) {
   let apiKey = "0e2e078ob6fa6c32484571t470bf53fe";
   let apiUrl =
@@ -101,3 +126,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("Amsterdam");
+displayForecast();
