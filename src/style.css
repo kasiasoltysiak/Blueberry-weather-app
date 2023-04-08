@@ -88,6 +88,13 @@ img {
   text-align: center;
   font-weight: 600;
 }
+.weather-forecast-temperatures {
+  text-align: center;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: 600;
+}
 
 #description {
   font-weight: 600;
