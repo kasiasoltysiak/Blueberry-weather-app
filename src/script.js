@@ -34,18 +34,25 @@ function formatDate(now) {
   displayDate.innerHTML = hour + ":" + minutes + "<br />" + date;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-     <div class="weather-forecast-date">${day.time}</div>
+     <div class="weather-forecast-date">${formatDay(day.time)}</div>
         <img src= ${day.condition.icon_url}
          alt=${day.condition.icon} id="icon" width="70%">
         <div class="weather-forecast-temperatures">
@@ -58,15 +65,12 @@ function displayForecast(response) {
         </div>
       </div>
    `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
-}
-
-function getForecast(city) {
-  let apiKey = "0e2e078ob6fa6c32484571t470bf53fe";
 }
 
 function showWeather(response) {
@@ -137,4 +141,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("Amsterdam");
-getForecast();
