@@ -40,13 +40,12 @@ img {
   max-width: 580px;
 }
 .interface {
-  background: #f4f4ef;
   margin: 0 auto;
   max-width: 580px;
   border-radius: 20px;
   padding: 50px;
   margin-top: 50px;
-  color: #3a3838;
+
   font-size: 14px;
 }
 .search-box {
@@ -101,5 +100,15 @@ img {
 }
 
 #forecast {
-  padding-top: 20px;
+  padding-top: 30px;
+}
+
+.night {
+  background: #1e3351;
+  color: #f4f4ef;
+}
+
+.day {
+  background: #f4f4ef;
+  color: #3a3838;
 }

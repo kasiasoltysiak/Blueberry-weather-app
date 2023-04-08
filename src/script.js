@@ -1,3 +1,12 @@
+function interface(hour) {
+  let interface = document.querySelector("#interface");
+  if (hour > 19) {
+    interface.classList.add("night");
+  } else {
+    interface.classList.add("day");
+  }
+}
+
 function formatDate(now) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -32,6 +41,7 @@ function formatDate(now) {
   let displayDate = document.querySelector("#now");
 
   displayDate.innerHTML = hour + ":" + minutes + "<br />" + date;
+  interface(hour);
 }
 
 function formatDay(timestamp) {
