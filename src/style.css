@@ -46,6 +46,8 @@ img {
   padding: 50px;
   margin-top: 50px;
   font-size: 14px;
+  background: #f4f4ef;
+  color: #3a3838;
 }
 .search-box {
   font-family: "Roboto", sans-serif;
@@ -70,6 +72,17 @@ img {
   line-height: 1.2;
   font-size: 14px;
 }
+.units {
+  position: relative;
+  font-size: 21px;
+  top: -24px;
+}
+
+.active {
+  text-decoration: none;
+  color: #3a3838;
+  cursor: default;
+}
 
 .weather-forecast-date {
   text-align: center;
@@ -92,14 +105,13 @@ img {
 }
 
 .night {
-  color: #f4f4ef;
+  background: linear-gradient(
+    88deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
 }
 
 .day {
-  background: #f4f4ef;
-  color: #3a3838;
+  background: linear-gradient(88deg, #ffffff 0%, #6796b1 100%);
 }
-
-.rain {
-}
-.clear;

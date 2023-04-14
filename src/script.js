@@ -1,12 +1,11 @@
-function interface(hour) {
-  let interface = document.querySelector("#interface");
-  if (hour > 19) {
-    interface.classList.add("night");
+function interface(time) {
+  let container = document.querySelector("#body");
+  if (time > 20) {
+    container.classList.add("night");
   } else {
-    interface.classList.add("day");
+    container.classList.add("day");
   }
 }
-
 function formatDate(now) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -51,7 +50,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -84,7 +82,6 @@ function displayForecast(response) {
 }
 
 function showWeather(response) {
-  console.log(response.data);
   celsiusTemp = Math.round(response.data.temperature.current);
 
   document.querySelector("h1").innerHTML = response.data.city;
@@ -97,9 +94,6 @@ function showWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("src", response.data.condition.icon_url);
-
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
 }
 
 function search(city) {
